@@ -3,8 +3,8 @@ module ff(
     input logic d,
     output logic q
 );
-    always @(clock) begin
-        q <= d;
+    always_ff @(posedge clock) begin
+        q = d;
     end
 
 endmodule

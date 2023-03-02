@@ -14,6 +14,9 @@ module or_gate(
         if (b==1) begin
             r = 1;
         end
+        if (a==0 && b==0) begin
+            r = 0;
+        end
     end
 
 endmodule

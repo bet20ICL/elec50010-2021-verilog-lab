@@ -1,0 +1,1 @@
+iverilog -Wall -g 2012 -s fadd4_tb -o fadd4_tb fadd_tb.v fadd4.v band.v bnot.v bor.v bxor.v

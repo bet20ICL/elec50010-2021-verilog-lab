@@ -23,25 +23,38 @@ module ff_tb();
     /* Module under test */
     ff dut(.clk(clk), .d(d), .q(q));
 
-    /* Non-synthesisable test-bench */
+    // /* Non-synthesisable test-bench */
+    // initial begin 
+    //     d=0;
+    //     @(posedge clk);
+    //     #1;
+    //     assert(q==0);
+    //     #2;
+
+    //     d=1;
+    //     @(posedge clk);
+    //     #1;
+    //     assert(q==1);
+    //     #2;
+
+    //     d=0;
+    //     @(posedge clk);
+    //     #1;
+    //     assert(q==0);
+    // end
+
     initial begin 
         d=0;
         @(posedge clk);
-        #1;
         assert(q==0);
-        #2;
 
         d=1;
         @(posedge clk);
-        #1;
         assert(q==1);
-        #2;
 
         d=0;
         @(posedge clk);
-        #1;
         assert(q==0);
     end
-
     
 endmodule

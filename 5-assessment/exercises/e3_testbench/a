@@ -1,0 +1,35 @@
+#! /usr/local/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1255-g771d02be)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/lib/ivl/v2009.vpi";
+S_0x557d490384a0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x557d49036d80 .scope module, "opcode_decoder" "opcode_decoder" 3 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 6 "opcode";
+    .port_info 2 /OUTPUT 1 "rtype";
+    .port_info 3 /OUTPUT 1 "itype";
+    .port_info 4 /OUTPUT 1 "jtype";
+o0x7f8e3a53e018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x557d49049250_0 .net "clk", 0 0, o0x7f8e3a53e018;  0 drivers
+o0x7f8e3a53e048 .functor BUFZ 1, C4<z>; HiZ drive
+v0x557d49049670_0 .net "itype", 0 0, o0x7f8e3a53e048;  0 drivers
+o0x7f8e3a53e078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x557d4907cc70_0 .net "jtype", 0 0, o0x7f8e3a53e078;  0 drivers
+o0x7f8e3a53e0a8 .functor BUFZ 6, C4<zzzzzz>; HiZ drive
+v0x557d4907cd40_0 .net "opcode", 5 0, o0x7f8e3a53e0a8;  0 drivers
+o0x7f8e3a53e0d8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x557d4907ce20_0 .net "rtype", 0 0, o0x7f8e3a53e0d8;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "opcode_decoder.v";
